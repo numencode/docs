@@ -2,9 +2,9 @@
 
 - [Installation](#installation)
     - [Server Requirements](#server-requirements)
-    - [Installing Numencode CMS](#installing-numencode-cms)
+    - [Installing Numencode CMS in 3 steps](#installing-numencode-cms)
     - [Configuration](#configuration)
-    - [Admin Dashboard](#admin-dashboard)
+- [Admin Dashboard](#admin-dashboard)
 - [Web Server Configuration](#web-server-configuration)
     - [Pretty URLs](#pretty-urls)
 
@@ -28,10 +28,10 @@ However, if you are not using Homestead, you will need to make sure your server 
 - XML PHP Extension
 
 <a name="installing-numencode-cms"></a>
-### Installing Numencode CMS
+### Installing Numencode CMS in 3 steps
 
 Numencode CMS utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using it, make sure you have Composer installed on your machine.
-Numencode CMS also requires a database (e.g. MySQL) for it to work, so prepare an empty database with associeated username and password before installation.
+Numencode CMS also requires a database (e.g. MySQL) for it to work, so prepare an empty database with associated username and password before installation.
 
 #### Step 1
 
@@ -54,31 +54,15 @@ When Composer finishes installing dependencies, run Numencode CMS installer:
 $ php artisan project:install
 ```
 
-<a name="configuration"></a>
-### Configuration
-
-Check file .env.example for more configurations and copy desired settings to your .env file.
-
-Be sure to check **/config/numencode.php** file for some more application settings.
-
-<a name="admin-dashboard"></a>
-### Admin Dashboard
-
-The URL for the admin dashboard should be your APP_URL (in .env file) followed by /admin, e.g.: 
-
-    http://www.numencode.app/admin
-
-The manager credentials are set by the php artisan project:install command.
-
-
+> During the installation you will be prompted for your application URL, database access information and you'll have to pick username and password for the manager (main administrator), who can access the admin dashboard after the completed installation.
 
 <a name="configuration"></a>
 ### Configuration
 
 #### Numencode CMS Configuration
 
-Check file .env.example for more configurations and copy desired settings to your .env file.
-Be sure to check **/config/numencode.php** file for some more application settings.
+Check the `/.env.example` file for more configurations and copy desired settings to your .env file.
+Be sure to check `/config/numencode.php` file for some more application settings.
 
 #### Public Directory
 
@@ -90,11 +74,20 @@ All of the configuration files for the Laravel framework are stored in the `conf
 
 #### Directory Permissions
 
-After installing Numencode CMS, you may need to configure some permissions. Directories within the `storage` and the `bootstrap/cache` directories should be writable by your web server or Laravel will not run.
+After installing Numencode CMS, you may need to configure some permissions. Directories within the `storage` and the `bootstrap/cache` directories should be writable by your web server or Numencode CMS will not run.
 
 #### Additional Configuration
 
 Numencode CMS needs almost no other configuration out of the box. You are free to get started developing! However, you may wish to review the `config/app.php` file and its documentation. It contains several options such as `timezone` and `locale` that you may wish to change according to your application.
+
+<a name="admin-dashboard"></a>
+## Admin Dashboard
+
+The URL for the admin dashboard should be your APP_URL (in .env file) followed by /admin, e.g.: 
+
+    http://www.numencode.app/admin
+
+The manager credentials are set by the previously executed `php artisan project:install` command.
 
 <a name="web-server-configuration"></a>
 ## Web Server Configuration
@@ -104,9 +97,9 @@ Numencode CMS needs almost no other configuration out of the box. You are free t
 
 #### Apache
 
-Laravel includes a `public/.htaccess` file that is used to provide URLs without the `index.php` front controller in the path. Before serving Laravel with Apache, be sure to enable the `mod_rewrite` module so the `.htaccess` file will be honored by the server.
+Numencode CMS includes a `public/.htaccess` file that is used to provide URLs without the `index.php` front controller in the path. Before serving Numencode CMS with Apache, be sure to enable the `mod_rewrite` module so the `.htaccess` file will be honored by the server.
 
-If the `.htaccess` file that ships with Laravel does not work with your Apache installation, try this alternative:
+If the `.htaccess` file that ships with Numencode CMS does not work with your Apache installation, try this alternative:
 
     Options +FollowSymLinks
     RewriteEngine On
@@ -123,4 +116,4 @@ If you are using Nginx, the following directive in your site configuration will 
         try_files $uri $uri/ /index.php?$query_string;
     }
 
-Of course, when using [Homestead](/docs/{{version}}/homestead) or [Valet](/docs/{{version}}/valet), pretty URLs will be automatically configured.
+Of course, when using [Homestead](https://github.com/laravel/docs/blob/5.5/homestead.md) or [Valet](https://github.com/laravel/docs/blob/5.5/valet.md), pretty URLs will be automatically configured.

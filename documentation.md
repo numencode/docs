@@ -1,0 +1,20 @@
+- ## Prologue
+    - [Release Notes](/docs/{{version}}/releases)
+    - [Upgrade Guide](/docs/{{version}}/upgrade)
+    - [Contribution Guide](/docs/{{version}}/contributions)
+    - [API Documentation](/api/{{version}})
+- ## Getting Started
+    - [Installation](/docs/{{version}}/installation)
+    - [Configuration](/docs/{{version}}/configuration)
+    - [Directory Structure](/docs/{{version}}/structure)
+- ## Admin Dashboard
+    - [Homepage](/docs/{{version}}/admin-homepage)
+    - [Settings](/docs/{{version}}/admin-settings)
+- ## Admin Frontend
+    - [Compiling Assets](/docs/{{version}}/admin-assets)
+- ## Website Frontend
+    - [Localization](/docs/{{version}}/localization)
+    - [Frontend Scaffolding](/docs/{{version}}/frontend)
+    - [Compiling Assets](/docs/{{version}}/assets)
+- ## Testing
+    - [Getting Started](/docs/{{version}}/testing)

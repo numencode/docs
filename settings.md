@@ -13,22 +13,13 @@
 Language management provides you with the possibility to have a multi-lingual website. You can add as many languages as
 you want by clicking the **Add new** button. At least one language is required for the website to work.
 
-#####Locale
-Unique, usually 2-letter string, which represents the language abbreviation, eg. *en*.
-
-#####Label
-Representational language title, eg. *English*.
-
-#####Order
-The sort order, taken into account in administration and language selection on the website, expressed by the number,
-eg. *10*.
-
-#####Is default?
-Default language in which the website opens on first visit. Only one language can be default and if you mark this
-checkbox, any other language that was set as default will be un-selected.
-
-#####Is hidden?
-When checked, the language will be disabled and hidden on the websites' language selection.
+| Setting         | Description |
+| ----------------|-------------|
+| **Locale**      | Unique, usually 2-letter string, which represents the language abbreviation, eg. *en*. |
+| **Label**       | Representational language title, eg. *English*. |
+| **Order**       | The sort order, taken into account in administration and language selection on the website, expressed by the number, eg. *10*. |
+| **Is default?** | Default language in which the website opens on first visit. Only one language can be default and if you mark this checkbox, any other language that was set as default will be un-selected. |
+| **Is hidden?**  | When checked, the language will be disabled and hidden on the websites' language selection. |
 
 <a name="menu-types"></a>
 ## Menu types
